@@ -1,0 +1,24 @@
+{
+  "name": "cpp",
+  "version": "1.0.0",
+  "description": "drupal-bulma-starter-subtheme is a subtheme of Bulma (https://www.drupal.org/project/bulma) base theme for Drupal 8. It has Bulma CSS framework, Sass, and Font Awesome built-in with livereload.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-clean && npm run build-sass-prod && npm run build-autoprefix",
+    "build-autoprefix": "postcss --use autoprefixer --no-map --output assets/css/style.css assets/css/style.css",
+    "build-clean": "node_modules/rimraf/bin.js assets/css",
+    "build-sass-prod": "node-sass --output-style expanded assets/sass/style.sass assets/css/style.css",
+    "build-sass": "node-sass --output-style expanded --source-map true assets/sass/style.sass assets/css/style.css",
+    "start": "concurrently \"npm run build-sass -- --watch\" \"node_modules/livereload/bin/livereload.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "concurrently": "^3.5.0",
+    "livereload": "^0.6.2",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.0",
+    "rimraf": "^2.6.1"
+  }
+}

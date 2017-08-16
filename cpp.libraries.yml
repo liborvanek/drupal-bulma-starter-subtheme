@@ -1,0 +1,14 @@
+global:
+  css:
+    component:
+      assets/font-awesome/css/font-awesome.css: {}
+    theme:
+      assets/css/style.css: {}
+  js:
+#    assets/js/cpp.js: {}
+  dependencies:
+#    - core/jquery
+#    - core/jquery.once
+#    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
